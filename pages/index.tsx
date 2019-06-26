@@ -1,11 +1,14 @@
-import * as React from 'react';
+import React, { lazy, Suspense, FC } from 'react';
+import { importMDX } from 'mdx.macro';
 
 import Layout from '../layouts/Main';
 
-const IndexPage: React.FunctionComponent = () => {
+const Content = lazy(() => importMDX('./Content.mdx'));
+
+const IndexPage: FC = () => {
   return (
     <Layout title="Changelog">
-      <span>hello</span>
+      <div>hello</div>
     </Layout>
   );
 };

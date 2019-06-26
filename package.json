@@ -3,27 +3,37 @@
   "version": "1.0.0",
   "proxy": "http://localhost:3000",
   "scripts": {
-    "dev": "node server.js",
+    "dev": "nodemon server.js",
     "build": "next build",
     "start": "next start",
     "ts-check": "tsc",
     "now-build": "next build"
   },
   "dependencies": {
+    "@types/isomorphic-fetch": "^0.0.35",
     "@types/styled-components": "^4.1.15",
     "@zeit/next-typescript": "^1.1.1",
     "dotenv": "^8.0.0",
     "express": "^4.17.1",
+    "isomorphic-fetch": "^2.2.1",
+    "mdx.macro": "^0.2.8",
     "next": "^8.1.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "styled-components": "^4.2.1"
+    "remark": "^10.0.1",
+    "remark-mdx": "^1.0.21",
+    "styled-components": "^4.2.1",
+    "to-vfile": "^6.0.0"
   },
   "devDependencies": {
+    "@mdx-js/loader": "^1.0.21",
+    "@next/mdx": "^8.1.0",
     "@types/next": "^7.0.6",
     "@types/react": "^16.4.16",
     "@types/react-dom": "16.0.11",
     "babel-plugin-styled-components": "^1.10.0",
+    "next-compose": "^0.0.2",
+    "nodemon": "^1.19.1",
     "typescript": "3.2.4"
   },
   "license": "ISC"
