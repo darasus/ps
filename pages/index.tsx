@@ -1,14 +1,24 @@
-import React, { lazy, Suspense, FC } from 'react';
-import { importMDX } from 'mdx.macro';
+import React, { FC } from 'react';
+import { MDXProvider } from '@mdx-js/react';
 
-import Layout from '../layouts/Main';
+import Changelog from 'content/changelog.mdx';
+import Layout from 'layouts/Main';
+import H2 from 'components/H2';
+import P from 'components/P';
 
-const Content = lazy(() => importMDX('./Content.mdx'));
+const components = {
+  h1: H2,
+  h2: H2,
+  h3: H2,
+  p: P,
+};
 
 const IndexPage: FC = () => {
   return (
-    <Layout title="Changelog">
-      <div>hello</div>
+    <Layout title='Changelog'>
+      <MDXProvider components={ components }>
+        <Changelog />
+      </MDXProvider>
     </Layout>
   );
 };

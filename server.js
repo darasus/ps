@@ -29,7 +29,7 @@ app
           fs.mkdirSync(dir);
         }
 
-        fs.writeFile(`${dir}/changelog.md`, content, function(err) {
+        fs.writeFile(`${dir}/changelog.mdx`, content, function(err) {
           if (err) throw err;
           console.log('File is created successfully.');
         });

@@ -4,7 +4,7 @@ import { ThemeProvider } from 'styled-components';
 
 import { GlobalStyle } from '../../globalStyles';
 import Header from '../../features/Header';
-import theme from '../../theme';
+import theme from 'constants/theme';
 
 type Props = {
   title?: string;
@@ -16,20 +16,20 @@ const Layout: FC<Props> = ({
 }) => (
   <div>
     <Head>
-      <title>{title} | PS</title>
-      <meta charSet="utf-8" />
-      <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      <title>{ title } | PS</title>
+      <meta charSet='utf-8' />
+      <meta name='viewport' content='initial-scale=1.0, width=device-width' />
       <link
-        href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900&display=swap"
-        rel="stylesheet"
+        href='https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900&display=swap'
+        rel='stylesheet'
       />
     </Head>
 
-    <ThemeProvider theme={theme}>
+    <ThemeProvider theme={ theme }>
       <>
         <GlobalStyle />
         <Header />
-        {children}
+        { children }
       </>
     </ThemeProvider>
   </div>
