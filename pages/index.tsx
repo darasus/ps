@@ -1,11 +1,24 @@
-import * as React from 'react';
+import React, { FC } from 'react';
+import { MDXProvider } from '@mdx-js/react';
 
-import Layout from '../layouts/Main';
+import Changelog from 'content/changelog.mdx';
+import Layout from 'layouts/Main';
+import H2 from 'components/H2';
+import P from 'components/P';
 
-const IndexPage: React.FunctionComponent = () => {
+const components = {
+  h1: H2,
+  h2: H2,
+  h3: H2,
+  p: P,
+};
+
+const IndexPage: FC = () => {
   return (
-    <Layout title="Changelog">
-      <span>hello</span>
+    <Layout title='Changelog'>
+      <MDXProvider components={ components }>
+        <Changelog />
+      </MDXProvider>
     </Layout>
   );
 };
