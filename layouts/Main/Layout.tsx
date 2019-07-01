@@ -33,7 +33,7 @@ const Layout: FC<Props> = ({
         <PageTransition timeout={ 1300 } classNames='page-transition'>
           { children }
         </PageTransition>
-        <style jsx={ true } global={ true }>{ `
+        <style>{ `
           .page-transition-enter {
             opacity: 0;
             transform: translate3d(0, 20px, 0);
