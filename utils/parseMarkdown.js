@@ -20,6 +20,7 @@ const parseMarkdown = (markdownContent) => {
       title,
       date,
       type,
+      shortContent: `${content.slice(0, 20)}...`,
       content,
     };
   });
