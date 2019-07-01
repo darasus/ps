@@ -1,18 +1,34 @@
-import React, { Component } from 'react';
-import Link from 'next/link';
+import React from 'react';
 
-class Post extends Component {
-  static async getInitialProps ({ query }: { query: any }) {
-    console.log('SLUG', query.slug);
-    return {};
-  }
-  render () {
-    return (
-      <Link href='/post?slug=something' as='/post/something'>
-        <h1>My blog post</h1>
-      </Link>
-    );
-  }
+import ChangelogPost from 'features/ChangelogPost';
+import { articles } from '../__mocks__/articles';
+import { Article } from 'types/article';
+import Layout from 'layouts/Main';
+
+interface IndexPage<P = {}> extends React.SFC<P> {
+  getInitialProps?: (ctx: any) => P;
 }
+
+interface Props {
+  article: Article | undefined;
+}
+
+const Post: IndexPage<Props> = ({ article }) => {
+  if (!article) {
+    return null;
+  }
+
+  return (
+    <Layout title='Changelog'>
+      <ChangelogPost article={ article } />
+    </Layout>
+  );
+};
+
+Post.getInitialProps = (ctx) => {
+  const article = articles.find(({ slug }) => slug === ctx.query.slug);
+
+  return { article };
+};
 
 export default Post;

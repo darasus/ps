@@ -1,6 +1,7 @@
 import React, { FC } from 'react';
 import Head from 'next/head';
 import { ThemeProvider } from 'styled-components';
+import { PageTransition } from 'next-page-transitions';
 
 import { GlobalStyle } from '../../globalStyles';
 import Header from '../../features/Header';
@@ -29,7 +30,27 @@ const Layout: FC<Props> = ({
       <>
         <GlobalStyle />
         <Header />
-        { children }
+        <PageTransition timeout={ 1300 } classNames='page-transition'>
+          { children }
+        </PageTransition>
+        <style>{ `
+          .page-transition-enter {
+            opacity: 0;
+            transform: translate3d(0, 20px, 0);
+          }
+          .page-transition-enter-active {
+            opacity: 1;
+            transform: translate3d(0, 0, 0);
+            transition: opacity 300ms, transform 300ms;
+          }
+          .page-transition-exit {
+            opacity: 1;
+          }
+          .page-transition-exit-active {
+            opacity: 0;
+            transition: opacity 300ms;
+          }
+        ` }</style>
       </>
     </ThemeProvider>
   </div>
