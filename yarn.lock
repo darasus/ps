@@ -3427,6 +3427,10 @@ markdown-table@^1.1.0:
   version "1.1.3"
   resolved "https://registry.yarnpkg.com/markdown-table/-/markdown-table-1.1.3.tgz#9fcb69bcfdb8717bfd0398c6ec2d93036ef8de60"
 
+marked@^0.3.6:
+  version "0.3.19"
+  resolved "https://registry.yarnpkg.com/marked/-/marked-0.3.19.tgz#5d47f709c4c9fc3c216b6d46127280f40b39d790"
+
 maximatch@^0.1.0:
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/maximatch/-/maximatch-0.1.0.tgz#86cd8d6b04c9f307c05a6b9419906d0360fb13a2"
@@ -3435,6 +3439,13 @@ maximatch@^0.1.0:
     array-union "^1.0.1"
     arrify "^1.0.0"
     minimatch "^3.0.0"
+
+md-2-json@^1.0.5:
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/md-2-json/-/md-2-json-1.0.5.tgz#12bf9ebda280335324e6c0cd10cd3e51b92b724a"
+  dependencies:
+    marked "^0.3.6"
+    traverse "^0.6.6"
 
 md5.js@^1.3.4:
   version "1.3.5"
@@ -4867,6 +4878,10 @@ slash@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/slash/-/slash-1.0.0.tgz#c41f2f6c39fc16d1cd17ad4b5d896114ae470d55"
 
+slugify@^1.3.4:
+  version "1.3.4"
+  resolved "https://registry.yarnpkg.com/slugify/-/slugify-1.3.4.tgz#78d2792d7222b55cd9fc81fa018df99af779efeb"
+
 snake-case@^2.1.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/snake-case/-/snake-case-2.1.0.tgz#41bdb1b73f30ec66a04d4e2cad1b76387d4d6d9f"
@@ -5295,6 +5310,10 @@ touch@^3.1.0:
   resolved "https://registry.yarnpkg.com/touch/-/touch-3.1.0.tgz#fe365f5f75ec9ed4e56825e0bb76d24ab74af83b"
   dependencies:
     nopt "~1.0.10"
+
+traverse@^0.6.6:
+  version "0.6.6"
+  resolved "https://registry.yarnpkg.com/traverse/-/traverse-0.6.6.tgz#cbdf560fd7b9af632502fed40f918c157ea97137"
 
 trim-lines@^1.0.0:
   version "1.1.2"
