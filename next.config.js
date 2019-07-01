@@ -3,9 +3,6 @@ const withTypeScript = require('@zeit/next-typescript');
 const TypeScriptChecker = require('fork-ts-checker-webpack-plugin');
 const path = require('path');
 const withSourceMaps = require('@zeit/next-source-maps');
-const withMDX = require('@zeit/next-mdx')({
-  extension: /\.mdx?$/,
-});
 
 module.exports = composePlugins([
   [
@@ -24,5 +21,4 @@ module.exports = composePlugins([
     },
   ],
   [withSourceMaps],
-  [withMDX],
 ]);
